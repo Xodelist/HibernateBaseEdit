@@ -26,7 +26,7 @@ import java.util.Optional;
 
     public void createUsersTable() {
             try {
-                statement.execute("CREATE TABLE if not exists users_table " +
+                statement.execute("CREATE TABLE if not exists users " +
                         "(id BIGINT NOT NULL AUTO_INCREMENT PRIMARY KEY UNIQUE," +
                         "name VARCHAR(20) NOT NULL ," +
                         "lastname VARCHAR(20) NOT NULL ," +
@@ -39,7 +39,7 @@ import java.util.Optional;
 
     public void dropUsersTable() {
         try {
-            statement.execute("DROP TABLE if exists users_table");
+            statement.execute("DROP TABLE if exists users");
         } catch (SQLException e){
             System.out.println("unable to remove table");
         }
